@@ -1,0 +1,234 @@
+:root {
+    font-size: 62.5%;
+    --bg-dark: #08080C;
+    --text-white: #ffffff;
+    --accent-mint: #1EE1B3;
+    --gray-text: #B3B3B3;
+    --transition: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    /* Защита от горизонтального скролла \ Block horizontal scroll*/
+}
+
+.container {
+    max-width: 153.9rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- HEADER --- */
+.header {
+    background: transparent;
+    padding: 2rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 9.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    font-size: 1.4rem;
+    color: var(--gray-text);
+    text-transform: capitalize;
+}
+
+.nav-list a:hover {
+    color: var(--accent-mint);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-login {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.btn-signup {
+    background-color: var(--accent-mint);
+    color: #000;
+    font-weight: 800;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* --- HERO SECTION --- */
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 21.8rem;
+    height: 76.9rem;
+    padding: 0;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.phone-img {
+    position: relative;
+    z-index: 2;
+    width: 61rem;
+    height: auto;
+    max-height: 76.9rem;
+}
+
+.accent-frame {
+    position: absolute;
+    width: 44rem;
+    height: 44rem;
+    border: 1px solid var(--accent-mint);
+    z-index: 1;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-22.32deg);
+    pointer-events: none;
+}
+
+.hero-content {
+    padding-top: 6.0rem;
+    width: 65.9rem;
+    flex: 0 0 auto;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.title-underline {
+    width: 24.5rem;
+    height: 0.3rem;
+    background: linear-gradient(90deg, #1EE1B3 64.08%, #515151 64.08%);
+    margin: 1rem 0 11.5rem 0;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9.7rem;
+    width: 100%;
+}
+
+.feature-icon {
+    background: #fff;
+    border-radius: 50%;
+    width: 10.4rem;
+    height: 10.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-icon img {
+    width: 5.2rem;
+    height: auto;
+}
+
+.feature-text h3 {
+    font-size: 2.2rem;
+    margin: 0 0 0.8rem 0;
+    color: var(--text-white);
+}
+
+.feature-text p {
+    color: var(--gray-text);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* --- UTILS & FOOTER --- */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.skip-link {
+    position: absolute;
+    top: -100rem;
+    left: 2rem;
+    background: var(--accent-mint);
+    color: #000;
+    padding: 1.5rem 2.5rem;
+    z-index: 1000;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.footer {
+    padding: 4rem 0;
+    border-top: 1px solid #1A1A1A;
+    margin-top: 8rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--gray-text);
+    font-size: 1.2rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-link {
+    font-size: 1.4rem;
+    color: var(--accent-mint);
+    text-decoration: underline;
+}
