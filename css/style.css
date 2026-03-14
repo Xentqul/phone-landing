@@ -127,7 +127,7 @@ body {
 
 .main-title {
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     white-space: nowrap;
     margin: 0;
@@ -231,4 +231,142 @@ a {
     font-size: 1.4rem;
     color: var(--accent-mint);
     text-decoration: underline;
+}
+
+/* --- SECTION GALLERY --- */
+.gallery-section {
+    padding: 8rem 0;
+    min-height: 80vh;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    display: grid;
+    grid-template-areas: "content";
+    aspect-ratio: 1 / 1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    max-width: 50rem;
+    /* !IMPORTANT! Ограничитель, чтобы на широких экранах не разносило */
+    justify-self: center;
+}
+
+.gallery-img {
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-btn {
+    grid-area: content;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+    padding: 1.5rem 3rem;
+    background-color: var(--accent-mint);
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.gallery-item:hover .gallery-btn {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 10px 20px rgba(30, 225, 179, 0.3);
+}
+
+.gallery-btn:hover {
+    background-color: var(--text-white);
+    transform: scale(1.05);
+}
+
+.btn-signup:active,
+.gallery-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-list a:focus,
+.btn-login:focus,
+.btn-signup:focus,
+.gallery-btn:focus {
+    outline: 2px solid var(--accent-mint);
+    outline-offset: 4px;
+}
+
+::selection {
+    background-color: var(--accent-mint);
+    color: #000;
+}
+
+/* -------------------------------------------------- MEDIA QUERIES --------------------------------------------------*/
+
+/* Мой экран (1600 ширина) */
+@media (max-width: 1600px) {
+    .container {
+        max-width: 140rem;
+    }
+
+    .hero-container {
+        gap: 5rem;
+        height: auto;
+        padding: 3rem 0;
+        align-items: center;
+    }
+
+    .phone-img {
+        width: 55rem;
+        object-fit: contain;
+    }
+
+    .accent-frame {
+        width: 38rem;
+        height: 38rem;
+    }
+
+    .title-underline {
+        margin-bottom: 6rem;
+    }
+
+    .nav-container {
+        padding: 0 4rem;
+    }
+
+    .nav-list {
+        gap: 4rem;
+    }
+}
+
+/* Мой экран (высота 529px) */
+@media (max-height: 600px) {
+    .hero-container {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .title-underline {
+        margin-bottom: 5rem;
+    }
 }
