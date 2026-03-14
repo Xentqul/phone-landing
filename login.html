@@ -35,41 +35,32 @@
     </header>
 
     <main id="main">
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-image">
-                    <img src="img/phone-mockup.png" alt="Begin App Interface" class="phone-img">
-                    <div class="accent-frame"></div>
-                </div>
+        <section class="auth-section">
+            <div class="container">
+                <h1 class="main-title" style="text-align: center; margin-bottom: 2rem;">Welcome Back</h1>
+                <p style="text-align: center; color: var(--gray-text); margin-bottom: 4rem;">Enter your details to
+                    access your account.</p>
 
-                <div class="hero-content">
-                    <h1 class="main-title">EVERYTHING YOU NEED!</h1>
-                    <div class="title-underline"></div>
-
-                    <div class="features-list">
-                        <article class="feature-item">
-                            <div class="feature-icon">
-                                <img src="img/icon-measure.png" alt="Icon">
-                            </div>
-                            <div class="feature-text">
-                                <h3>Body measurement tracking</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt.</p>
-                            </div>
-                        </article>
-
-                        <article class="feature-item">
-                            <div class="feature-icon">
-                                <img src="img/icon-closet.png" alt="Icon">
-                            </div>
-                            <div class="feature-text">
-                                <h3>In home trial of clothes and closet</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt.</p>
-                            </div>
-                        </article>
+                <form action="https://httpbin.org/post" method="POST" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="login_email" placeholder="example@mail.com" required>
                     </div>
-                </div>
+
+                    <div class="form-group">
+                        <label for="login-pass">Password</label>
+                        <input type="password" id="login-pass" name="login_password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-controls">
+                        <button type="submit" class="btn-signup">Log In</button>
+                    </div>
+
+                    <p class="form-switch" style="margin-top: 2.5rem; text-align: center; font-size: 1.3rem;">
+                        Don't have an account? <a href="form.html"
+                            style="color: var(--accent-mint); font-weight: 700;">Sign Up here</a>
+                    </p>
+                </form>
             </div>
         </section>
     </main>
